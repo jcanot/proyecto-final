@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+</head>
+<body style="background-color: rgb(222, 224, 231)">
+<img src="D:\python\ProyectoFinal\blog\static\imagenes\montanas-nevadas_3840x2160_xtrafondos.com.jpg">
+    {% load static %}
+    <!-- Navigation-->
+
+    <nav class="navbar navbar-light bg-light static-top">
+        <div class="container">
+            <h3><a class="navbar-brand" href="{% url 'menu' %}">menu principal</a> <br> <br>  <br> 
+            <dd><a class="navbar-brand" href="{% url 'cargarAutor' %}">ingresar Autor</a> &nbsp &nbsp
+            <a class="navbar-brand" href="{% url 'autor' %}">Autores cargados</a>  <br>  <br>
+            <a class="navbar-brand" href="{% url 'cargarSeccion' %}">ingresar seccion</a>  &nbsp &nbsp
+            <a class="navbar-brand" href="{% url 'seccion' %}">Secciones cargadas</a> <br>  <br>
+            <a class="navbar-brand" href="{% url 'cargarArticulo' %}">ingresar Articulo</a> &nbsp &nbsp
+            <a class="navbar-brand" href="{% url 'articulo' %}">Articulos cargados</a>   <br>   <br>
+            <a class="navbar-brand" href="{% url 'busqueda' %}">Buscar autor</a></h3>
+            
+        </div>
+    </nav>
+
+    {% block contenidoCambia %}
+
+    {% endblock %}
+
+    <h3> Blog <h3>
+    
+</body>
+</html>

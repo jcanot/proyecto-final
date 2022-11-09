@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+</head>
+<body style="background-color: rgb(184, 174, 175)">
+    {% extends "blog/padre.html" %}
+
+    {% load static %}
+
+    {% block contenidoCambia %}
+        <h1>Autores</h1>
+        
+        {% for autor in autores%}
+            
+        <h3><li>{{autor.nombre}} {{autor.apellido}}</li></h3>
+        
+        {% endfor %}
+        
+    {% endblock %}
+    
+</body>
+</html>
